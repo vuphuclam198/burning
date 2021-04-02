@@ -35,6 +35,7 @@
     </dd>
     </dl>
     </div>
+    <div class="column-right">
     <h2>Alerts</h2>
     <p>&nbsp;</p>
     <div class="message-success">
@@ -70,3 +71,56 @@
     <li><span class="item">Three</span></li>
     </ul>
     </div>
+
+
+    
+    <input type="checkbox" style="border:2px dotted #00f;display:block;background:#ff0000;" />
+    
+    
+<div class="data items" role="tablist">
+    <div class="data item title active" data-role="collapsible" id="tab-label-description" role="tab" data-collapsible="true" aria-controls="description" aria-selected="false" aria-expanded="true" tabindex="0">
+        <a class="data switch" tabindex="-1" data-toggle="trigger" href="#description" id="tab-label-description-title">
+            Description                  </a>
+    </div>
+    <div class="data item content" aria-labelledby="tab-label-description" id="description" data-role="content" role="tabpanel" aria-hidden="false">
+    Content Description
+    </div>
+
+    <div class="data item title" data-role="collapsible" id="tab-label-specification" role="tab" data-collapsible="true" aria-controls="specification" aria-selected="false" aria-expanded="false" tabindex="0">
+        <a class="data switch" tabindex="-1" data-toggle="trigger" href="#specification" id="tab-label-specification-title">
+            Specifications                </a>
+    </div>
+    <div class="data item content" aria-labelledby="tab-label-specification" id="specification" data-role="content" role="tabpanel" aria-hidden="true" style="display: none;">
+    Specification Content
+    </div>
+
+    <div class="data item title" data-role="collapsible" id="tab-label-faq" role="tab" data-collapsible="true" aria-controls="faq" aria-selected="false" aria-expanded="false" tabindex="0">
+        <a class="data switch" tabindex="-1" data-toggle="trigger" href="#faq" id="tab-label-faq-title">
+        FAQ                   </a>
+    </div>
+    <div class="data item content" aria-labelledby="tab-label-faq" id="faq" data-role="content" role="tabpanel" aria-hidden="true" style="display: none;">
+    FAQ content
+    </div>
+</div>
+
+
+<div class="navigation-tab" data-sections="tabs">
+    <div class="item title active" data-section="title"><a class="switch" href="#product.info.description" data-toggle="switch">Details</a></div>
+    <div class="item content active" data-section="content">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+    <div class="item title" data-section="title"><a class="switch" href="#product_tags" data-toggle="switch">Tags</a></div>
+    <div class="item content" data-section="content">
+    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+    </div>
+    <div class="item title" data-section="title"><a class="switch" href="#product_reviews" data-toggle="switch">Reviews</a></div>
+    <div class="item content" data-section="content">
+    <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+    </div>
+
+
+    @_tab-control-color-active: #2d2d2d,
+        @_tab-control-color:#a9a9a9,
+        @_tab-control-font-weight: 133px,
+        @_tab-control-line-height: 50px,
