@@ -1,14 +1,17 @@
 <div class="column-left">
     <h2 class="title">Buttons</h2>
-    <div class="row"><button class="action tocart primary" type="button">Add to cart</button> <button class="btn-standard" type="button">Standard</button> <button class="button-adjust" type="button">+ </button> <input class="input-adjust" type="number"> <button class="button-adjust" type="button">-</button></div>
-    <div class="row"><button class="action tocart primary" type="button">Add to cart</button> <button class="btn-standard-primary" type="button">Standard</button> <button class="button-adjust" type="button">+ </button> <input class="input-adjust" type="number"> <button class="button-adjust" type="button">-</button></div>
-    <h2>Checkboxes &amp; Radio Buttons</h2>
-    <p><input id="r1" name="r" type="radio"><label for="r1">Radio 1</label></p>
-    <p><input id="r2" name="r" type="radio"><label for="r2">Radio 2</label></p>
-    <p><input id="r3" name="" type="checkbox"><label for="r3">check 1</label></p>
-    <p><input id="r4" name="" type="checkbox"><label for="r4">check 2</label></p>
-    <h2>Input Fields</h2>
-    <p><label for="fname"></label> <input id="fname" name="fname" type="text"></p>
+    <div class="row"><button class="" type="button">ADD TO CART</button> <button class="action tocart primary" type="button">STANDARD</button> <button class="btn-adjust" type="button">+ </button> <input class="input-text qty" type="number"> <button class="btn-adjust" type="button">-</button></div>
+    <div class="row"><button class="" type="button">ADD TO CART</button> <button class="btn-standard-black" type="button">STANDARD</button> <button class="btn-adjust" type="button">+ </button> <input class="input-adjust" type="number"> <button class="btn-adjust" type="button">-</button></div>
+    <h2 class="title">Checkboxes &amp; Radio Buttons</h2>
+    <p><input checked="checked" name="" type="checkbox"><label for="r3">Ticked</label></p>
+    <p><input name="" type="checkbox"><label for="r4">Not Ticked</label></p>
+    <p><input checked="checked" disabled="disabled" name="" type="checkbox"><label for="r3">Ticked Disable</label></p>
+    <p><input disabled="disabled" name="" type="checkbox"><label for="r4">Disable</label></p>
+    <p><input name="r" type="radio"><label for="r1">Radio 1</label></p>
+    <p><input name="r" type="radio"><label for="r2">Radio 2</label></p>
+    <p><input name="r" type="radio"><label for="r1">Radio 1</label></p>
+    <p><input name="r" type="radio"><label for="r2">Radio 2</label></p>
+    <h2 class="title">Input Fields</h2>
     <div class="control"><select id="select" name="select">
     <option value="">Dropdown field</option>
     <option value="5">5</option>
@@ -17,23 +20,18 @@
     <option value="20">20</option>
     </select></div>
     <p>&nbsp;</p>
-    <p><input class="mage-error" type="text"></p>
+    <p><label for="fname"></label> <input id="fname" name="fname" type="text" placeholder="Text field"></p>
+    <p><input class="mage-error" type="text" placeholder="email@gmail.com"></p>
     <div class="mage-error">Please enter a valid email address</div>
-    <h2>Navigation</h2>
-    <dl class="navigation-tab" data-sections="tabs">
-    <dt class="item title active" data-section="title"><a class="switch" href="#product.info.description" data-toggle="switch">Details</a></dt>
-    <dd class="item content active" data-section="content">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-    </dd>
-    <dt class="item title" data-section="title"><a class="switch" href="#product_tags" data-toggle="switch">Tags</a></dt>
-    <dd class="item content" data-section="content">
-    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-    </dd>
-    <dt class="item title" data-section="title"><a class="switch" href="#product_reviews" data-toggle="switch">Reviews</a></dt>
-    <dd class="item content" data-section="content">
-    <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </dd>
-    </dl>
+    <h2 class="title">Navigation</h2>
+    <div class="data items" role="tablist">
+    <div id="tab-label-description" class="data item title active" tabindex="0" role="tab" data-role="collapsible" data-collapsible="true" aria-controls="description" aria-selected="false" aria-expanded="true"><a id="tab-label-description-title" class="data switch" tabindex="-1" href="#description" data-toggle="trigger"> Description </a></div>
+    <div id="description" class="data item content" role="tabpanel" aria-labelledby="tab-label-description" data-role="content" aria-hidden="false">Content Description</div>
+    <div id="tab-label-specification" class="data item title" tabindex="0" role="tab" data-role="collapsible" data-collapsible="true" aria-controls="specification" aria-selected="false" aria-expanded="false"><a id="tab-label-specification-title" class="data switch" tabindex="-1" href="#specification" data-toggle="trigger"> Specifications </a></div>
+    <div id="specification" class="data item content" style="display: none;" role="tabpanel" aria-labelledby="tab-label-specification" data-role="content" aria-hidden="true">Specification Content</div>
+    <div id="tab-label-faq" class="data item title" tabindex="0" role="tab" data-role="collapsible" data-collapsible="true" aria-controls="faq" aria-selected="false" aria-expanded="false"><a id="tab-label-faq-title" class="data switch" tabindex="-1" href="#faq" data-toggle="trigger"> FAQ </a></div>
+    <div id="faq" class="data item content" style="display: none;" role="tabpanel" aria-labelledby="tab-label-faq" data-role="content" aria-hidden="true">FAQ content</div>
+    </div>
     </div>
     <div class="column-right">
     <h2>Alerts</h2>
@@ -71,56 +69,4 @@
     <li><span class="item">Three</span></li>
     </ul>
     </div>
-
-
-    
-    <input type="checkbox" style="border:2px dotted #00f;display:block;background:#ff0000;" />
-    
-    
-<div class="data items" role="tablist">
-    <div class="data item title active" data-role="collapsible" id="tab-label-description" role="tab" data-collapsible="true" aria-controls="description" aria-selected="false" aria-expanded="true" tabindex="0">
-        <a class="data switch" tabindex="-1" data-toggle="trigger" href="#description" id="tab-label-description-title">
-            Description                  </a>
     </div>
-    <div class="data item content" aria-labelledby="tab-label-description" id="description" data-role="content" role="tabpanel" aria-hidden="false">
-    Content Description
-    </div>
-
-    <div class="data item title" data-role="collapsible" id="tab-label-specification" role="tab" data-collapsible="true" aria-controls="specification" aria-selected="false" aria-expanded="false" tabindex="0">
-        <a class="data switch" tabindex="-1" data-toggle="trigger" href="#specification" id="tab-label-specification-title">
-            Specifications                </a>
-    </div>
-    <div class="data item content" aria-labelledby="tab-label-specification" id="specification" data-role="content" role="tabpanel" aria-hidden="true" style="display: none;">
-    Specification Content
-    </div>
-
-    <div class="data item title" data-role="collapsible" id="tab-label-faq" role="tab" data-collapsible="true" aria-controls="faq" aria-selected="false" aria-expanded="false" tabindex="0">
-        <a class="data switch" tabindex="-1" data-toggle="trigger" href="#faq" id="tab-label-faq-title">
-        FAQ                   </a>
-    </div>
-    <div class="data item content" aria-labelledby="tab-label-faq" id="faq" data-role="content" role="tabpanel" aria-hidden="true" style="display: none;">
-    FAQ content
-    </div>
-</div>
-
-
-<div class="navigation-tab" data-sections="tabs">
-    <div class="item title active" data-section="title"><a class="switch" href="#product.info.description" data-toggle="switch">Details</a></div>
-    <div class="item content active" data-section="content">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-    </div>
-    <div class="item title" data-section="title"><a class="switch" href="#product_tags" data-toggle="switch">Tags</a></div>
-    <div class="item content" data-section="content">
-    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-    </div>
-    <div class="item title" data-section="title"><a class="switch" href="#product_reviews" data-toggle="switch">Reviews</a></div>
-    <div class="item content" data-section="content">
-    <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </div>
-    </div>
-
-
-    @_tab-control-color-active: #2d2d2d,
-        @_tab-control-color:#a9a9a9,
-        @_tab-control-font-weight: 133px,
-        @_tab-control-line-height: 50px,
