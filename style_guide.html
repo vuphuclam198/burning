@@ -1,14 +1,18 @@
+<!-- column left -->
 <div class="column-left">
     <h2 class="title">Buttons</h2>
-    <div class="row"><button class="action tocart primary" type="button">Add to cart</button> <button class="btn-standard" type="button">Standard</button> <button class="button-adjust" type="button">+ </button> <input class="input-adjust" type="number"> <button class="button-adjust" type="button">-</button></div>
-    <div class="row"><button class="action tocart primary" type="button">Add to cart</button> <button class="btn-standard-primary" type="button">Standard</button> <button class="button-adjust" type="button">+ </button> <input class="input-adjust" type="number"> <button class="button-adjust" type="button">-</button></div>
-    <h2>Checkboxes &amp; Radio Buttons</h2>
-    <p><input id="r1" name="r" type="radio"><label for="r1">Radio 1</label></p>
-    <p><input id="r2" name="r" type="radio"><label for="r2">Radio 2</label></p>
-    <p><input id="r3" name="" type="checkbox"><label for="r3">check 1</label></p>
-    <p><input id="r4" name="" type="checkbox"><label for="r4">check 2</label></p>
-    <h2>Input Fields</h2>
-    <p><label for="fname"></label> <input id="fname" name="fname" type="text"></p>
+    <div class="row"><button class="" type="button">ADD TO CART</button> <button class="action tocart primary" type="button">STANDARD</button> <button class="btn-adjust" type="button">+ </button> <input class="input-text qty" type="number"> <button class="btn-adjust" type="button">-</button></div>
+    <div class="row"><button class="" type="button">ADD TO CART</button> <button class="btn-standard-black" type="button">STANDARD</button> <button class="btn-adjust" type="button">+ </button> <input class="input-adjust" type="number"> <button class="btn-adjust" type="button">-</button></div>
+    <h2 class="title">Checkboxes &amp; Radio Buttons</h2>
+    <p><input checked="checked" name="" type="checkbox"><label for="r3">Ticked</label></p>
+    <p><input name="" type="checkbox"><label for="r4">Not Ticked</label></p>
+    <p><input checked="checked" disabled="disabled" name="" type="checkbox"><label for="r3">Ticked Disable</label></p>
+    <p><input disabled="disabled" name="" type="checkbox"><label for="r4">Disable</label></p>
+    <p><input name="r" type="radio"><label for="r1">Radio 1</label></p>
+    <p><input name="r" type="radio"><label for="r2">Radio 2</label></p>
+    <p><input name="r" type="radio"><label for="r1">Radio 1</label></p>
+    <p><input name="r" type="radio"><label for="r2">Radio 2</label></p>
+    <h2 class="title">Input Fields</h2>
     <div class="control"><select id="select" name="select">
     <option value="">Dropdown field</option>
     <option value="5">5</option>
@@ -17,56 +21,42 @@
     <option value="20">20</option>
     </select></div>
     <p>&nbsp;</p>
-    <p><input class="mage-error" type="text"></p>
+    <p><label for="fname"></label> <input id="fname" name="fname" type="text" placeholder="Text field"></p>
+    <p><input class="mage-error" type="text" placeholder="email@gmail.com"></p>
     <div class="mage-error">Please enter a valid email address</div>
-    <h2>Navigation</h2>
-    <dl class="navigation-tab" data-sections="tabs">
-    <dt class="item title active" data-section="title"><a class="switch" href="#product.info.description" data-toggle="switch">Details</a></dt>
-    <dd class="item content active" data-section="content">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-    </dd>
-    <dt class="item title" data-section="title"><a class="switch" href="#product_tags" data-toggle="switch">Tags</a></dt>
-    <dd class="item content" data-section="content">
-    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-    </dd>
-    <dt class="item title" data-section="title"><a class="switch" href="#product_reviews" data-toggle="switch">Reviews</a></dt>
-    <dd class="item content" data-section="content">
-    <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </dd>
-    </dl>
+    <h2 class="title">Navigation</h2>
+    <div class="data items" role="tablist">
+    <div id="tab-label-description" class="data item title active" tabindex="0" role="tab" data-role="collapsible" data-collapsible="true" aria-controls="description" aria-selected="false" aria-expanded="true"><a id="tab-label-description-title" class="data switch" tabindex="-1" href="#description" data-toggle="trigger"> Description </a></div>
+    <div id="description" class="data item content" role="tabpanel" aria-labelledby="tab-label-description" data-role="content" aria-hidden="false">Content Description</div>
+    <div id="tab-label-specification" class="data item title" tabindex="0" role="tab" data-role="collapsible" data-collapsible="true" aria-controls="specification" aria-selected="false" aria-expanded="false"><a id="tab-label-specification-title" class="data switch" tabindex="-1" href="#specification" data-toggle="trigger"> Specifications </a></div>
+    <div id="specification" class="data item content" style="display: none;" role="tabpanel" aria-labelledby="tab-label-specification" data-role="content" aria-hidden="true">Specification Content</div>
+    <div id="tab-label-faq" class="data item title" tabindex="0" role="tab" data-role="collapsible" data-collapsible="true" aria-controls="faq" aria-selected="false" aria-expanded="false"><a id="tab-label-faq-title" class="data switch" tabindex="-1" href="#faq" data-toggle="trigger"> FAQ </a></div>
+    <div id="faq" class="data item content" style="display: none;" role="tabpanel" aria-labelledby="tab-label-faq" data-role="content" aria-hidden="true">FAQ content</div>
     </div>
-    <h2>Alerts</h2>
+    </div>
+
+    <!-- column right -->
+    <div class="column-right">
+    <h2 class="title">Alerts</h2>
     <p>&nbsp;</p>
     <div class="message-success">
-    <div>Product has been added to your shopping bag</div>
+    <p class="alert_product box-green">Product has been added to your shopping bag</p>
     </div>
     <div class="message-error">
-    <div>Invalid username or password</div>
+    <p class="alert_product box-red">Invalid username or password</p>
     </div>
-    <h2>Typography</h2>
+    <h2 class="title">Typography</h2>
+    <p>Open Sans Regular - 13px / 20px</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div>
     <h1>h1 Lora Regular - 32px</h1>
     <h2>h2 Lora Regular - 24px</h2>
     <h3>h3 Lora Regular - 18px</h3>
     <h4>h4 Roboto Bold - 15px</h4>
+    </div>
     <h2>Text Link</h2>
-    <p><a>Text Link</a></p>
-    <h2>Typography</h2>
-    <p>Open Sans Regular - 13px / 20px</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <h2>Misc</h2>
-    <p><em class="las la-times">close</em> <em class="lab la-facebook-f">facebook</em> <em class="lab la-instagram">instagram</em> <em class="lab la-twitter">twitter</em></p>
-    <div class="row">
-    <div class="col">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="74"}}
-    <div class="col-content">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="75"}}</div>
-    </div>
-    <div class="col">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="74"}}
-    <div class="col-content">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="75"}}</div>
-    </div>
-    </div>
-    <div class="actions dropdown example-dropdown-1"><button class="action toggle" data-mage-init="{" data-toggle="dropdown" aria-haspopup="true"> button + dropdown </button>
-    <ul class="dropdown">
-    <li><span class="item">One</span></li>
-    <li><span class="item">Two</span></li>
-    <li><span class="item">Three</span></li>
-    </ul>
+    <a>Text_link_hover</a>
+    <h2 class="title">Misc</h2>
+    <p>&nbsp;</p>
+    <div class="row">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="20"}}</div>
     </div>
