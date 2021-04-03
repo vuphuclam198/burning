@@ -1,12 +1,4 @@
 // trungtt
-.column-left {
-    float: left;
-    width: 50%;
-}
-.column-right {
-    float: left;
-    width: 50%;
-}
 body {
     font-family: @font-family__roboto;
     font-weight: 400;
@@ -91,7 +83,7 @@ select,input[type='text'] {
     .lib-css(color,@color-ee1414);
 }
 
-//navigation tab
+// navigation tab
 .navigation-tab,
 .data.items {
     .lib-data-tabs(@_tab-control-font-family: @font-family__roboto,
@@ -162,5 +154,10 @@ a {
     background: @product_link_bg;
     padding: 10px;
     color: @product_link_color;
-    border: 1px solid @@product_link_color;
+    border: 1px solid @product_link_color;
+}
+.grid-box-guide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
 }
