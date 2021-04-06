@@ -23,8 +23,6 @@
 @font-family__roboto: @font-family-name__roboto, @font-family__sans-serif;
 @font-family-name__lora:'Lora';
 @font-family__lora: @font-family-name__lora, @font-family__sans-serif;
-@font-family-name__market-ot:'Market-ot';
-@font-family__market-ot: @font-family-name__market-ot, @font-family__sans-serif;
 
 //  Color nesting
 @panel__background-color: @color-gray-light0;
@@ -310,9 +308,31 @@
 
 @color-22b725:#22b725;
 
+// font-size destop(vuna)
+@h1__font-size: 32px;
+@h2__font-size: 24px;
+@h3__font-size: 18px;
+@h4__font-size: 15px;
 
-@font-size-13px: 13px;
-@font-size-30px: 30px;
-@font-size-15px: 15px;
-@font-size-32px: 32px;
-@font-size-200px: 200px;
+// color and background style-guide (vuna)
+@box-product-top-bgcolor: #68c524;
+@box-product-bottom-bgcolor: #ee1414;
+@front-size-typo: #ccc;
+@link__color: #333;
+@link__hover__color: #ccc;
+@product_link_bg: #3b3b3d;  
+@product_link_color: #fff;  
+
+.box-bgcolor-style_guide(@param) {
+    border: 1px solid @param;
+    color: @param;
+}
+
+.transform(@string){
+	-webkit-transform: @string;
+	-moz-transform: 	 @string;
+	-ms-transform: 		 @string;
+	-o-transform: 		 @string;
+}
+
+
