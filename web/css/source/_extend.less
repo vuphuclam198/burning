@@ -1,4 +1,8 @@
 // trungtt
+@import "slick/slick.less";
+@import "slick/slick-theme.less";
+
+& when (@media-common = true) {
 .column-left {
     float: left;
     width: 50%;
@@ -10,7 +14,7 @@
 body {
     font-family: @font-family__roboto;
     font-weight: 400;
-    font-size: 13px;
+    font-size: @font-size-13px;
 }
 
 /*button*/
@@ -21,7 +25,7 @@ body {
 }
 
 .title {
-    font-size: 30px;
+    font-size: @font-size-30px;
     line-height: 22px;
     color: @color-gray_light;
     font-weight: 300;
@@ -80,7 +84,7 @@ select,input[type='text'] {
     .lib-css(font-weight,400);
     .lib-css(background-color, @color-white);
     .lib-css(border, 1px solid @color-ddd);
-    .lib-css(font-size,13px);
+    .lib-css(font-size,@font-size-13px);
     .lib-css(color,@color-gray20);
     &.mage-error {
         .lib-css(border, 1px solid @color-ee1414);
@@ -95,7 +99,7 @@ select,input[type='text'] {
 .navigation-tab,
 .data.items {
     .lib-data-tabs(@_tab-control-font-family: @font-family__roboto,
-        @_tab-control-font-size: 13px,
+        @_tab-control-font-size: @font-size-13px,
         @_tab-control-font-weight: 700,
         @_tab-control-background-color: @color-f9f9f9,
         @_tab-control-color: @color-a9a9a9,
@@ -113,3 +117,4 @@ select,input[type='text'] {
 }
 
 //trungtt
+}

@@ -1,0 +1,54 @@
+<div class="slick">
+   <?php for($i=0;$i<3;$i++):?>
+   <div class="slick-item">
+      <div class="slick-image">
+         <?=
+            $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('slick-image')
+            ->toHtml();
+         ?>
+      </div>
+      <div class="slick-infor">
+            <?=
+               $block->getLayout()
+               ->createBlock('Magento\Cms\Block\Block')
+               ->setBlockId('slick-title')
+               ->toHtml();
+            ?>
+         <div class="slick-desc">
+            <?=
+               $block->getLayout()
+               ->createBlock('Magento\Cms\Block\Block')
+               ->setBlockId('slick-desc')
+               ->toHtml();
+            ?>
+         </div>
+            <?=
+               $block->getLayout()
+               ->createBlock('Magento\Cms\Block\Block')
+               ->setBlockId('slick-button')
+               ->toHtml();
+            ?>
+      </div>
+   </div>
+   <?php endfor;?>
+</div>
+
+<script>
+   require([
+      'jquery',
+      'slick',
+      'domReady!'
+   ], function ($) {
+      $(".slick").slick({
+         dots: false,
+         infinite: true,
+         prevArrow: false,
+         nextArrow: false,
+         speed: 300,
+         slidesToShow: 1,
+         slidesToScroll: 1
+      });
+   });
+</script>

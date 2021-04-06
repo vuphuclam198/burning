@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- slick -->
+        <referenceContainer name="page.wrapper">
+            <container name="slick" before="-">
+                <block name="slick-block" class="Magento\Framework\View\Element\Template" template="Magento_Cms::slick.phtml" htmlClass="slick" htmlTag="div"/>
+            </container>
+        </referenceContainer>
+
+        <!-- footer -->
+        <!-- <referenceBlock name="footer_links" remove="true" />
+        <referenceContainer name="footer">
+            <container name="footer-top"  htmlTag="div" htmlClass="footer-top" before="-">
+                <block name="footer-top-left" class="Magento\Framework\View\Element\Template" template="Magento_Cms::footer_top_left.phtml" before="-"/>
+            </container>
+            <block name="slick-block" class="Magento\Framework\View\Element\Template" template="Magento_Theme::slick.phtml" htmlClass="slick" htmlTag="div"/>
+        </referenceContainer> -->
+    </body>
+</page>
