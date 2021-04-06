@@ -9,5 +9,12 @@
     <update handle="default_head_blocks"/>
     <body>
         <!-- <referenceContainer name="main" remove="true"/> -->
+        <!-- footer -->
+        <referenceBlock name="footer_links" remove="true" />
+        <referenceContainer name="footer">
+            <container name="footer-top"  htmlTag="div" htmlClass="footer-top" before="-">
+                <block name="footer-top-left" class="Magento\Framework\View\Element\Template" template="Magento_Theme::footer_top_left.phtml" before="-"/>
+            </container>
+        </referenceContainer>
     </body>
 </page>
