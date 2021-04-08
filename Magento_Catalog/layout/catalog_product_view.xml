@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+       <referenceBlock name="product.info.sku" remove="true"/>
+       <referenceBlock name="product.info.addto" remove="true"/>
+       <referenceBlock name="product.info.review" remove="true"/>
+        <referenceContainer name="product.info.main">
+            <block name="product-infor-main-desc" class="Magento\Framework\View\Element\Template" template="Magento_Catalog::product_infor_main_desc.phtml" />
+        </referenceContainer>
+       <referenceContainer name="product.info.details">
+            
+        </referenceContainer>
+        <referenceBlock name="product.info.details">
+            <referenceBlock name="product.attributes" remove="true"/>
+            <referenceBlock name="product.info.description">
+                <arguments>
+                    <argument name="title" translate="true" xsi:type="string">Description</argument>
+                </arguments>
+            </referenceBlock>
+            <block class="Magento\Catalog\Block\Product\View" name="product.info.care" template="Magento_Catalog::product/view/care.phtml" group="detailed_info">
+                <arguments>
+                    <argument name="title" translate="true" xsi:type="string">Care Warranty</argument>
+                    <argument name="sort_order" xsi:type="string">11</argument>
+                </arguments>
+            </block>
+            
+        </referenceBlock>
+       
+    </body>
+</page>
