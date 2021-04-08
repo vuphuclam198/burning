@@ -401,6 +401,14 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+        /* search button */
+        .block-search .action.search {
+            right: 0;
+            top: 50%;
+            z-index: 1;
+            transform: translateY(-50%);
+        }
+        
     .customer-name,
     .customer-welcome + .authorization-link {
         display: none;

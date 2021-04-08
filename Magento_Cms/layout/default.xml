@@ -14,13 +14,6 @@
             </container>
         </referenceContainer>
 
-        <!-- footer -->
-        <!-- <referenceBlock name="footer_links" remove="true" />
-        <referenceContainer name="footer">
-            <container name="footer-top"  htmlTag="div" htmlClass="footer-top" before="-">
-                <block name="footer-top-left" class="Magento\Framework\View\Element\Template" template="Magento_Cms::footer_top_left.phtml" before="-"/>
-            </container>
-            <block name="slick-block" class="Magento\Framework\View\Element\Template" template="Magento_Theme::slick.phtml" htmlClass="slick" htmlTag="div"/>
-        </referenceContainer> -->
+        
     </body>
 </page>

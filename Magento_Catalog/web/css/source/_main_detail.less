@@ -1,0 +1,148 @@
+& when (@media-common = true) {
+    /* breadcrumbs */
+    .breadcrumbs .item:not(:last-child) {
+        .lib-css(font-size,@font-size-12px);
+        .lib-css(line-height,24px);
+        .lib-css(color,@color-black_dark);
+        .lib-css(font-weight,400);
+        .lib-css(font-family,@font-family__roboto);
+    }
+    .breadcrumbs .items>li {
+        .lib-css(font-size,@font-size-12px);
+        .lib-css(line-height,24px);
+        //color: #333333;
+        .lib-css(font-weight,400);
+        .lib-css(font-family,@font-family__roboto);
+    }
+    .breadcrumbs .item:not(:last-child):after {
+        .lib-css(line-height,24px);
+    }
+
+    /*main */
+    .page-layout-1column .product.media {
+        width: 64.6% !important;
+    }
+
+    .page-layout-1column .product-info-main {
+        width: 33.6% !important;
+        .lib-css(margin-left,20px);
+        .lib-css(border, 1px solid @color-ddd);
+    }
+
+    /*left */
+    .fotorama__stage__frame .fotorama__img {
+        .lib-css(width,100%);
+        .lib-css(top, 37%);
+    }
+    .fotorama__nav--thumbs {
+        .lib-css(margin-top, -150px);
+    }
+
+    /*right */
+    .page-title-wrapper .product {
+        .lib-css(padding,30px 30px 0px 30px);
+    }
+    .page-title {
+        font-size: @font-size-22px;
+        letter-spacing: -1px;
+        line-height: 26px;
+        color: @color-222;
+        font-weight: 400;
+        font-family: @font-family__lora;
+        padding: 25px 30px 0px 30px;
+    }
+    .price-wrapper {
+        font-size: 22px;
+        line-height: 18px;
+        color: @color-very-dark-gray;
+        font-weight: 400;
+        font-family: @font-family__roboto;
+    }
+    .product-info-main .product-info-price .price-box {
+        padding: 0px 30px 20px 30px;
+    }
+    
+    .product-options-bottom .price-box .price-container .price, .product-info-price .price-box .price-container .price {
+        font-size: @font-size-22px;
+        line-height: 18px;
+        color: @color-very-dark-gray;
+        font-weight: 400;
+        font-family: @font-family__roboto;
+    }
+   
+    .product-info-main .product-add-form {
+        padding: 0px 30px;
+        margin-top: -15px;
+    }
+    .super-attribute-select {
+        margin-top: -5px;
+        width: 125%;
+        height: 40px;
+    }
+    .fieldset>.field>.label, .fieldset>.fields>.field>.label {
+        font-size: 13px;
+        line-height: 20px;
+        color: @color-222;
+        font-weight: 700;
+        font-family: @font-family__roboto;
+    }
+    .super-attribute-select {
+        font-size: @font-size-13px;
+        line-height: 30px;
+        color: @color-gray20;
+        font-weight: 400;
+        font-family: @font-family__roboto;
+        text-align: right;
+    }
+
+    .box-tocart .action.tocart:not(:last-child) {
+        .lib-button(@_button-font-family:@font-family__roboto,
+                @_button-font-weight:700,
+                @_button-width: 100%,
+                @_button-background:@color-22b725,
+                @_button-background-hover:@color-22b725,
+                @_button-background-active: @color-22b725,
+                @_button-color:@color-white,
+                @_button-color-hover:@color-white,
+                @_button-border:none,
+                @_button-border-hover:none);
+        .lib-css(text-align,center);
+        .lib-css(height,40px);
+    }
+    .product-infor-main-desc {
+        margin-top: -12px;
+        font-size: @font-size-13px;
+        line-height: 20px;
+        color: @color-gray20;
+        font-weight: 400;
+        font-family: @font-family__roboto;
+        padding: 0px 30px 30px 30px;
+        & a{
+            text-decoration: underline;
+        }
+    }
+}
+
+& when (@media-common = false) {
+    /*main */
+    /*left */
+    .fotorama__stage__frame .fotorama__img {
+        width: 100%;
+        top: 37%;
+    }
+    .fotorama__nav--thumbs {
+        margin-top: -189px;
+    }
+    /*right */
+    .product-options-bottom .price-box .price-container .price, .product-info-price .price-box .price-container .price {
+        font-size: @font-size-22px;
+        line-height: 18px;
+        color: @color-very-dark-gray;
+        font-weight: 400;
+        font-family: @font-family__roboto;
+    }
+    
+    .page-title-wrapper .product {
+        padding: 30px;
+    }
+}
