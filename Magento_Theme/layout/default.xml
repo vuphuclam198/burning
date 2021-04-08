@@ -9,28 +9,59 @@
     <update handle="default_head_blocks"/>
     <body>
         <referenceContainer name="header.panel" >
-            <block class="Magento\Framework\View\Element\Template" name="header_contact" template="Magento_Theme::header/header_contact.phtml" before="-" />
-            <block class="Magento\Framework\View\Element\Template" name="header_info" template="Magento_Theme::header/header_info.phtml" before="skip_to_content" after="header_contact" />
-            <referenceBlock name="top.links">
-                <block class="Magento\Framework\View\Element\Template" name="link_social123" template="Magento_Theme::header/header_social.phtml" />
-            </referenceBlock>
-            <referenceBlock name="skip_to_content">
-            <block class="Magento\Framework\View\Element\Template" name="link_social1234" template="Magento_Theme::db.phtml" />
-
+                <block class="Magento\Framework\View\Element\Template" name="header_contact" template="Magento_Theme::header/header_contact.phtml" before="-" />
+                <block class="Magento\Framework\View\Element\Template" name="header_info" template="Magento_Theme::header/header_info.phtml" before="skip_to_content" after="header_contact" />
+                <referenceBlock name="top.links">
+                    <block class="Magento\Framework\View\Element\Template" name="link_social123" template="Magento_Theme::header/header_social.phtml" />
+                </referenceBlock>
+                <referenceBlock name="skip_to_content">
+                <block class="Magento\Framework\View\Element\Template" name="link_social1234" template="Magento_Theme::db.phtml" />
             </referenceBlock>
         </referenceContainer>
-        <referenceBlock name="skip_to_content" remove="true" />
-        <referenceContainer name="main.content">
-            <referenceBlock  name="header" remove="true" />
-        </referenceContainer>
 
-        <referenceBlock name="logo">
+        <!-- Logo -->
+        <!-- <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/my_logo.png</argument>
                 <argument name="logo_width" xsi:type="number">300</argument>
                 <argument name="logo_height" xsi:type="number">300</argument>
                 <argument name="logo_alt" xsi:type="string">Logo name</argument>
             </arguments>
+        </referenceBlock> -->
+
+        <!-- remove -->
+        <referenceBlock name="skip_to_content" remove="true" />
+
+        <referenceContainer name="main.content">
+            <referenceBlock  name="header" remove="true" />
+        </referenceContainer>
+
+        <!-- header-nav -->
+        <referenceBlock name="store.menu">
+            <!-- <referenceBlock name="navigation.sections" remove="true" /> -->
+            <!-- <block class="Magento\Framework\View\Element\Template" name="navigation.catagories" before="-" template="Magento_Theme::html/header_categories.phtml" /> -->
         </referenceBlock>
+
+        <!-- footer -->
+        <referenceContainer name="footer-container">
+            <container name="footer.showroom" before="-" htmlClass="footer showroom" htmlTag="div">
+                    <container label="Page Footer" htmlTag="div" htmlClass="page-main">
+                        <block class="Magento\Framework\View\Element\Template" name="showroom" template="Magento_Theme::footer/footer_showroom.phtml" />
+                    </container>
+            </container>
+            <container name="footer.store.infomation" after="footer.showroom" htmlClass="footer.infomation" htmlTag="div">
+                <container name="footer.exclusive" before="-" htmlClass="footer exclusive" htmlTag="div">
+                    <container label="Page Footer" htmlTag="div" htmlClass="page-main">
+                        <block class="Magento\Framework\View\Element\Template" name="exclusive" template="Magento_Theme::footer/footer_exclusive.phtml" />
+                    </container>
+                </container>
+                <container htmlClass="footer ship" htmlTag="div" >
+                    <container label="Page Footer" htmlTag="div" htmlClass="page-main">
+                        <block class="Magento\Framework\View\Element\Template" name="ship.store" template="Magento_Theme::footer/footer_ship.phtml" />
+                    </container>
+                </container>
+            </container>
+        </referenceContainer>
+
     </body> 
 </page>

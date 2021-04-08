@@ -1,8 +1,12 @@
 <div class="header-info">
     <ul class="info-list">
-        <li class="info-list__item"><a href="#">Outdoor Furniture</a></li>
-        <li class="info-list__item"><a href="#">Fireplaces</a></li>
-        <li class="info-list__item"><a href="#">Weber BBQs</a></li>
-        <li class="info-list__item"><a href="#">Canberra Showroom Open 7 Days</a></li>
+    <?= $block->getLayout()
+
+    ->createBlock('Magento\Cms\Block\Block')
+ 
+    ->setBlockId('header_info')
+
+    ->toHtml();
+    ?>
     </ul>
 </div>

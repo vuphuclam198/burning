@@ -1,68 +1,81 @@
-.panel.header {
-    text-align: center;
-    .contact {
-        float: left;
-    
-        .contact-title {
-            padding-right: 15px;
+@import "_header.less";
+
+/* Footer */
+
+
+.footer.exclusive {
+    background-image: url('../images/Rectangle15.png');
+}
+
+.exclusive-content {
+    padding: 78px 0 86px 0;
+    color: @color-white;
+
+    .heading-exclusive {
+        .lib-font-size(37);
+        line-height: 24px;
+        font-family: @font-family__lora;
+        font-weight: 700;
+        text-align: center;
+        color: @color-white;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        font-size: 18px;
+        font-family: @font-family__roboto;
+        max-width: 586px;
+        margin: 0 auto;
+        line-height: 26px;
+        letter-spacing: .1px;
+        text-align: center;
+
+        a {
+            color: @color-white;
+            text-decoration: underline;
         }
-
-        .contact-content {
-            position: relative;
-            padding-left: 15px;
-            &:before {
-                content: '';
-                width: 1px;
-                height: 100%;
-                background: #fff;
-                position: absolute;
-                left: 0;
-                top: 0;
-                .transform(rotate(30deg));
-            }
-        }
-    }
-    
-    .header-info {
-        display: inline-block;
-    }
-    .info-list {
-        margin-bottom: 0;
-    }
-
-    .info-list__item {
-        display: inline-block;
-        margin-right: 15px;
-        padding-left: 15px;
-        position: relative;
-
-         &:before {
-             content: '';
-             width: 3px;
-             height: 3px;
-             background: @color-white;
-             position: absolute;
-             left: 0;
-             top: 50%;
-             .transform(translateY(-50%));
-
-         }
-
-         &:nth-child(1) {
-             &:before {
-                content: '';
-                display: none;
-             }
-           
-         }
-
-         a {
-             color: @color-white;
-         }
-    }
-
-    header.links > .authorization-link:after {
-        content: '';
-        display: none;
     }
 }
+
+/* showroom */
+.footer.showroom {
+    border-top:  1px solid @hr__section__bg;
+}
+
+.showroom {
+    max-width: 1127px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showroom-item {
+    &.canberra_showroom {
+        margin-left: -6%;
+    }
+
+    &.weber {
+        margin-right: 62px;
+    }
+
+    button {
+        background: none;
+        color: @button__footer__color;
+        border: 1px solid#08083c;
+        .lib-font-size(15);
+    }
+}
+
+/*  navi*/
+.nav-sections-item-content {
+    background: none;
+}
+
+    /* search button */
+    .block-search .action.search {
+        right: 0;
+        top: 50%;
+        z-index: 1;
+        transform: translateY(-50%);
+    }

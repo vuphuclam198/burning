@@ -1,0 +1,112 @@
+& when (@media-common = true) {
+    .panel.header {
+        text-align: center;
+        .contact {
+            float: left;
+            .lib-font-size(14);
+
+            .contact-title {
+                padding-right: 6px;
+            }
+    
+            .contact-content {
+                position: relative;
+                padding-left: 11px;
+
+                &:before {
+                    content: '';
+                    width: 1px;
+                    height: 100%;
+                    background: #fff;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    .transform(rotate(30deg));
+                }
+            }
+        }
+        
+        .header-info {
+            float: left;
+            margin-left: 62px;
+        }
+        .info-list {
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+    
+        .info-list__item {
+            display: inline-block;
+            margin-right: 7px;
+            padding-left: 15px;
+            position: relative;
+    
+             &:before {
+                 content: '';
+                 border-radius: 50%;
+                 width: 3px;
+                 height: 3px;
+                 background: @color-white;
+                 position: absolute;
+                 left: 0;
+                 top: 50%;
+                 .transform(translateY(-50%));
+    
+             }
+    
+             &:nth-child(1) {
+                 &:before {
+                    content: '';
+                    display: none;
+                 }
+               
+             }
+    
+             a {
+                 color: @color-white;
+                 .lib-font-size(14);
+                 letter-spacing: .15px;
+             }
+        }
+    }
+    
+    /* header content */
+    .header.content {
+        padding-top: 26px;
+        padding-bottom: 0;
+    }
+
+    .block-search .control {
+        .input-text {
+            border: 2px solid @border-input-header;
+            padding: 18px 10px;
+        }
+    }
+
+    .header-nav {
+        background: none;
+        .header-category__list {
+        }
+    
+    
+        .header-category__item {
+            display: inline-block;
+            width: 7%;
+        }
+    
+        .header-category__link {
+            font-family: @font-family__roboto;
+            .lib-font-size(12);
+            line-height: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+
+}
+.navigation .level0 > .level-top {
+    font-family: @font-family__roboto;
+    .lib-font-size(12);
+    font-weight: 500;
+    line-height: 13px;
+}

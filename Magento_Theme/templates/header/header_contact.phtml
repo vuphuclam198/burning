@@ -1,4 +1,10 @@
 <div class="contact">
-    <span class="contact-title">Contact us </span>
-    <span class="contact-content">1300 660 330</span>
+    <?= $block->getLayout()
+
+    ->createBlock('Magento\Cms\Block\Block')
+ 
+    ->setBlockId('header_contact')
+
+    ->toHtml();
+    ?>
 </div>
