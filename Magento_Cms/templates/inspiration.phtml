@@ -4,8 +4,7 @@
     </div>
     <p class="description">Find us at @burninglog, show us your furniture with #burninglog</p>
 
-    <div class="content">
-        <div class="inspiration__list">
+    <div class="inspiration__content">
             <?= $block->getLayout()
 
             ->createBlock('Magento\Cms\Block\Block')
@@ -22,12 +21,13 @@
 </div>
 
 <script>
+
     require([
         'jquery',
         'slick'
     ], function ($) {
         $(document).ready(function () {
-            $(".inspiration__list").slick({
+            $(".inspiration__content").slick({
                 dots: true,
                 infinite: true,
                 speed: 300,
