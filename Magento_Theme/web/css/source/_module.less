@@ -101,6 +101,17 @@
     }
 
     .header.panel {
+        &:before {
+            content: '';
+            display: table;
+        }
+
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
         > .header.links {
             .lib-list-inline();
             float: right;
@@ -149,6 +160,7 @@
         img {
             display: block;
             height: auto;
+            margin-top: -4px;
         }
 
         .page-print & {
@@ -241,7 +253,7 @@
         &.content {
             border-top: 1px solid @footer-links-separator-border-color;
             padding-top: @indent__base;
-
+            
             ul:extend(.abs-reset-list all) {
             }
 
@@ -400,15 +412,7 @@
 //  Navigation
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-        /* search button */
-        .block-search .action.search {
-            right: 0;
-            top: 50%;
-            z-index: 1;
-            transform: translateY(-50%);
-        }
-        
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {        
     .customer-name,
     .customer-welcome + .authorization-link {
         display: none;
@@ -469,8 +473,19 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .logo {
+        display: block;
+        float: unset;
         margin-bottom: 13px;
         margin-top: 4px;
+        margin: 0 auto;
+        max-width: none;
+        img {
+            display: block;
+            height: auto;
+            margin: 0 auto;
+            margin-top: -2px;
+            width: 150px;
+        }
     }
 }
 
@@ -479,6 +494,9 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .page-header {
+        border: none;
+    }
     .cms-page-view .page-main {
         padding-top: 0;
         position: relative;
@@ -495,10 +513,6 @@
         height: 100%; // Stretch screen area for sticky footer
     }
 
-    .navigation ul {
-        padding: 0 8px;
-    }
-
     .page-header {
         border: 0;
         margin-bottom: 0;
@@ -509,8 +523,8 @@
         }
 
         .header.panel:extend(.abs-add-clearfix-desktop all) {
-          padding-top: 6px;
-          padding-bottom: 0;
+          padding-top: 10px;
+          padding-bottom: 10px;
         }
 
         .switcher {
@@ -608,8 +622,10 @@
         &.panel {
             > .header.links {
                 .lib-list-inline();
-                float: right;
-                margin-left: auto;
+                position: absolute;
+                right: 10px;
+                top: 17px;
+                transform: translateY(-50%);
 
                 .authorization-link:after {
                     content: '';
@@ -654,6 +670,8 @@
 
         &.content:extend(.abs-add-clearfix-desktop all) {
             padding: @indent__l @indent__base 0;
+            padding-top: 26px;
+
         }
     }
 
@@ -679,10 +697,10 @@
     }
 
     .page-footer {
-        .lib-css(background, @footer__background-color);
+        .lib-css(background, none);
         margin-top: auto;
         padding-bottom: @indent__m;
-
+        border-top:  1px solid @hr__section__bg;
         .switcher {
             .options {
                 ul.dropdown {
@@ -717,11 +735,11 @@
             border-top: none;
 
             .block {
-                float: right;
+                float: none;
             }
 
             ul {
-                padding-right: 50px;
+                padding-right: 10px;
             }
 
             .switcher.store {
@@ -748,5 +766,29 @@
                 }
             }
         }
+    }
+}
+
+
+// media screen xxs= 320px
+@media only screen and (min-width: (@screen__xxs)){
+    .header.panel {
+        &:before {
+            content: '';
+            display: table;
+        }
+
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .page-header .header.panel {
+        padding-top: 6px;
+        padding-bottom: 0;
     }
 }

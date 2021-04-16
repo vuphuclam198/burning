@@ -55,7 +55,6 @@
                         <block class="Magento\Framework\View\Element\Template" name="exclusive" template="Magento_Theme::footer/footer_exclusive.phtml" />
                     </container>
                 </container>
-                <container htmlClass="footer ship" htmlTag="div" >
                     <container label="Page Footer" htmlTag="div" htmlClass="page-main">
                         <block class="Magento\Framework\View\Element\Template" name="ship.store" template="Magento_Theme::footer/footer_ship.phtml" />
                     </container>
@@ -63,6 +62,9 @@
             </container>
         </referenceContainer>
 
-        
+            <!-- <block class="Magento\Framework\View\Element\Template" name="footer-social" template="Magento_Theme::footer/footer_social.phtml" />
+
+            <move element="footer-social" destination="form.subscribe" after="-" /> -->
+
     </body> 
 </page>

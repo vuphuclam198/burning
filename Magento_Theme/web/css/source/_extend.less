@@ -1,81 +1,28 @@
 @import "_header.less";
-
-/* Footer */
-
-
-.footer.exclusive {
-    background-image: url('../images/Rectangle15.png');
-}
-
-.exclusive-content {
-    padding: 78px 0 86px 0;
-    color: @color-white;
-
-    .heading-exclusive {
-        .lib-font-size(37);
-        line-height: 24px;
-        font-family: @font-family__lora;
-        font-weight: 700;
-        text-align: center;
-        color: @color-white;
-        letter-spacing: 1px;
-        margin-bottom: 20px;
-    }
-
-    .description {
-        font-size: 18px;
-        font-family: @font-family__roboto;
-        max-width: 586px;
-        margin: 0 auto;
-        line-height: 26px;
-        letter-spacing: .1px;
-        text-align: center;
-
-        a {
-            color: @color-white;
-            text-decoration: underline;
-        }
-    }
-}
-
-/* showroom */
-.footer.showroom {
-    border-top:  1px solid @hr__section__bg;
-}
-
-.showroom {
-    max-width: 1127px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.showroom-item {
-    &.canberra_showroom {
-        margin-left: -6%;
-    }
-
-    &.weber {
-        margin-right: 62px;
-    }
-
-    button {
-        background: none;
-        color: @button__footer__color;
-        border: 1px solid#08083c;
-        .lib-font-size(15);
-    }
-}
-
+@import "_footer.less";
 /*  navi*/
 .nav-sections-item-content {
     background: none;
 }
 
-    // /* search button */
-    // .block-search .action.search {
-    //     right: 0;
-    //     top: 50%;
-    //     z-index: 1;
-    //     transform: translateY(-50%);
-    // }
+// @screen__xxs: 320px;
+// @screen__xs: 480px;
+// @screen__s: 640px;
+// @screen__m: 768px;
+// @screen__l: 1024px;
+// @screen__xl: 1440px;
+
+// media screen xl=1024px
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+}
+
+// media screen xl=1024px
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+}
+
+// media screen xl=1024px
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+}

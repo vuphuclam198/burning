@@ -1,3 +1,6 @@
+@import "_categories-box.less";
+// @import "_achievement.less";
+
 & when (@media-common = true) {
     .slick-item {
         position: relative;
@@ -51,4 +54,331 @@
     }
 
 
+}
+
+
+/* achievement */
+.achievement {
+    background: @achievement__bg;
+    display: grid;
+    margin-top: 6px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 10px 0;
+    a {
+        color: @color-white;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: .8px;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+
+        &:nth-child(3) {
+            &:before {
+                content: unset;
+            }
+        }
+
+        &:after {
+            content: '\e608';
+            display: inline-block;
+            font-family: 'luma-icons';  
+            margin-left: 5px;
+            .lib-font-size(13);
+        }
+
+        &:before {
+            background: @achievement__wall__bg;
+            content: '';
+            height: calc(100% - 14px);
+            width: 1px;
+            left: 103%;
+            position: absolute;
+            top: 50%;
+            .transform(translateY(-50%));
+        }
+    }
+}   
+/* end achievement */
+
+
+/* collection */
+.section-collection {
+    margin-top: 20px;
+    
+    .collection__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .content {
+        padding: 0 35px;
+        text-align: center;
+    }
+
+    a {
+        color: @color-222;
+        display: inline-block;
+        font-family: @font-family__lora;
+        font-weight: 400;
+        margin-top: 23px;
+        margin-bottom: 3px;
+        .lib-font-size(24);
+    }
+    
+    p {
+        color: @link__color;
+        .lib-font-size(14);
+        letter-spacing: .1px;
+        margin-bottom: 16px;
+    }
+
+    button {
+        background: none;
+        border: 2px solid @color-black;
+        color: @button-collection__color;
+        font-weight: 700;
+        font-family: @font-family__roboto; 
+        .lib-font-size(13);
+        padding: 10px 15px 10px 15px;
+        word-spacing: -2px;
+
+        &:after {
+            content: '\e608';
+            display: inline-block;
+            font-family: 'luma-icons';  
+            margin-left: 15px;
+            .lib-font-size(10);
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
+/* end collection */
+
+/* start section-catalogues */
+.section-catalogues {
+    margin-top: 54px;
+    
+    .catalogues__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .catalogues__item {
+        position: relative;
+    }
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        .transform(translate(-50%, -50%));
+        text-align: center;
+    }
+
+    .title {
+        color: @color-white;
+        font-family: @font-family__lora;
+        font-weight: 700;
+        margin-bottom: 24px;
+        .lib-font-size(52);
+        line-height: 52px;
+        text-transform: uppercase;
+    }
+
+    a {
+        background: @button-collection__color;
+        color: @color-white;
+        font-weight: 700;
+        font-family: @font-family__roboto; 
+        .lib-font-size(13);
+        padding: 14px 18px;
+        border: 2px solid @color-white;
+        text-transform: uppercase;
+        letter-spacing: -.2px;
+        display: inline-block;
+        margin-bottom: 15px;
+
+        &:after {
+            content: '\e608';
+            display: inline-block;
+            font-family: 'luma-icons';  
+            margin-left: 15px;
+            .lib-font-size(10);
+        }
+    }
+}
+/* end section-catalogues */
+
+/* start section best sellers */
+.section-Best-sellers {
+    height: 937px;
+
+}/* end section best sellers */
+
+/* start section inspiration*/
+.section-inspiration {
+    .description {
+        font-size: 13px;
+        margin: 0 auto;
+        max-width: 375px;
+        margin-top: -2px;
+        letter-spacing: .1px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .inspiration__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .content {
+        text-align: center;
+        a {
+            background: none;
+            border: 2px solid @button-collection__color;
+            color: @button-collection__color;
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: -.6px;
+            margin-top: 15px;
+            padding: 7px 20px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+    
+    img {
+        width: 100%;
+    }
+}/* end section inspiration*/
+
+/* start section blog*/
+.section-lifestyle-blog {
+    margin-top: 40px;
+
+    .blog__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        margin-top: 17px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .blog__item {
+        margin-bottom: 8px;
+        .blog__title {
+            color: @section-heading__color;
+            font-weight: 400;
+            font-family: @font-family__lora;
+            .lib-font-size(18);
+            display: inline-block;
+            margin: 10px 0 11px 0;
+            line-height: 23px;
+        }
+
+        .description {
+            color: @link__color;
+            .lib-font-size(13);
+            line-height: 20px;
+            letter-spacing: .1px;
+            margin-bottom: 22px;
+        }
+
+        .more {
+            color: @link__color;
+            .lib-font-size(13);
+            padding-bottom: 8px;
+        }
+    }
+}/* end section blog*/
+
+/* start section-testimonials */
+.section-testimonials {
+    margin-top: 37px;
+
+    .Testimonials-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        margin-top: 10px;
+    }
+
+    .testimonials__item {
+        border: 1px solid @button__cate__border;
+        padding: 36px 40px 10px 38px;
+        margin-bottom: 13px;
+
+        .description {
+            letter-spacing: .1px;
+            line-height: 20px;
+            .lib-font-size(13);
+        }
+
+        .more {
+            color: @link__color;
+            .lib-font-size(13);
+            font-weight: 500;
+        }
+
+        .author {
+            color: @button__footer__color;
+            display: block;
+            font-weight: 700;
+            margin: 20px 0px -1px 0;
+            letter-spacing: -.5px;
+        }
+    }
+
+    .link__more {
+        margin: 20px 0 12px 0px;
+        text-align: center;
+
+        .link {
+            border: 2px solid @color-black;
+            color: @button-collection__color;
+            display: inline-block;
+            font-weight: 700;
+            .lib-font-size(13);
+            letter-spacing: -.5px;
+            padding: 7px 15px;
+            text-transform: uppercase;
+        }
+    }
+}/* end section-testimonials */
+
+@media only screen and(min-width: 1024px) {
+    .block.widget .products-grid .product-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .page-layout-1column .block.widget .products-grid .product-item {
+        width: 100%;
+        position: relative;
+
+        &:after {
+            background: red;
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: calc(100% - 10%);
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }   
 }
