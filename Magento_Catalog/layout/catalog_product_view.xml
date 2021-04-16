@@ -25,7 +25,7 @@
             </referenceBlock>
             <block class="Magento\Catalog\Block\Product\View" name="product.info.care" template="Magento_Catalog::product/view/care.phtml" group="detailed_info">
                 <arguments>
-                    <argument name="title" translate="true" xsi:type="string">Care Warranty</argument>
+                    <argument name="title" translate="true" xsi:type="string"> Care &amp; Warranty</argument>
                     <argument name="sort_order" xsi:type="string">11</argument>
                 </arguments>
             </block>
