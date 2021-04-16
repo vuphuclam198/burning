@@ -1,0 +1,19 @@
+<div class="section-testimonials">
+    <div class="section-heading">
+        <p>Burning Log Testimonials</p>
+    </div>
+
+    <div class="Testimonials-list">
+        <?= $block->getLayout()
+
+        ->createBlock('Magento\Cms\Block\Block')
+
+        ->setBlockId('testimonials-blocks')
+
+        ->toHtml();
+        ?>
+    </div>
+    <div class="link__more">
+        <a href="#" class="link">View more testimonials</a>
+    </div>
+</div>
