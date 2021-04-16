@@ -1,0 +1,39 @@
+<div class="section-inspiration">
+    <div class="section-heading">
+        <p>Outdoor inspiration with our instagram</p>
+    </div>
+    <p class="description">Find us at @burninglog, show us your furniture with #burninglog</p>
+
+    <div class="content">
+        <div class="inspiration__list" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+            <?= $block->getLayout()
+
+            ->createBlock('Magento\Cms\Block\Block')
+
+            ->setBlockId('inspiration-block')
+
+            ->toHtml();
+            ?>
+        </div>
+        
+        <!-- <a href="#">View our instagram</a> -->
+        
+    </div>
+</div>
+
+<!-- <script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $(".inspiration__list").slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 5,
+                slidesToScroll: 1
+            });
+        });
+    });
+</script> -->
