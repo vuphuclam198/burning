@@ -1,0 +1,142 @@
+& when (@media-common = true) {
+    // .page-products.page-layout-1column .products-grid .product-item{
+    //     width: 25%;
+    // }
+    .products-grid .product-item-info:hover, .products-grid .product-item-info.active {
+        border: unset;
+        box-shadow: unset;
+    }
+    .products-grid .product-item-inner {
+        box-shadow: unset;
+        border: unset;
+    }
+    .listing-color {
+        color: @color-gray20;
+    }
+    .product-item-name, .product.name a {
+        color: @color-222;
+        font-weight: 700;
+    }
+    .abs-visually-hidden-desktop-s, .products-grid .product-item-info:not(:hover):not(.active) .product-item-inner {
+        overflow: unset;
+    }
+    .products {
+        margin: 30px 0px 10px 0px;
+    }
+    .page-layout-1column {
+        & .products~.toolbar-products {
+            position: relative;
+        }
+    }
+    .products.wrapper~.toolbar .pages {
+        position: absolute;
+        // left: 50%;
+    }
+    .pages strong.page {
+        background: unset;
+        font-size: 13px;
+        font-family: @font-family__roboto;
+        font-weight: 700px;
+        color: @color-222;
+        line-height: 18px;
+    }
+    .pages .action {
+        background: unset;
+        box-shadow: unset;
+        border: unset;
+        border-radius: unset;
+    }
+    .page-main>.page-title-wrapper .page-title {
+        padding: 17px 0 0 0;
+        font-size: 17px;
+        line-height: 20px;
+        color: @color-222;
+        font-weight: 700;
+        font-family: @font-family__roboto;
+    }
+
+    //sale pre order 
+    .list {
+        margin-top: -9px;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .products.wrapper~.toolbar .pages {
+        left: 25%;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .products.wrapper~.toolbar .pages {
+        left: 35%;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .page-products .product-item-info {
+        text-align: center;
+    }
+    .products.wrapper~.toolbar .pages {
+        left: 45%;
+    }
+    .page-products .products-grid .product-item, .page-layout-1column .products-grid .product-item, .page-layout-3columns .products-grid .product-item, .page-products.page-layout-1column .products-grid .product-item, .page-products.page-layout-3columns .products-grid .product-item {
+        margin-bottom: 10%;
+    }
+}
+@media (max-width: 767px) {
+    .page-products .products-grid .product-item, .page-layout-1column .products-grid .product-item, .page-layout-3columns .products-grid .product-item, .page-products.page-layout-1column .products-grid .product-item, .page-products.page-layout-3columns .products-grid .product-item {
+        width: 100%;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .page-products.page-layout-1column .products-grid .product-item
+    {
+        width: 50%;
+    }
+    .listing-color {
+        font-size: 11px;
+        letter-spacing: 1px;
+        line-height: 24px;
+        padding-top: 8%;
+        text-transform: uppercase;
+    }
+    .product-item-name, .product.name a {
+        line-height: 18px;
+        margin-top: -3px;
+        word-spacing: 1px;
+        letter-spacing: -0.5px;
+        font-size: 13px;
+    }
+    .products-grid .product-item-name, .product.name a {
+        // padding-right: 12.5%;
+        width: 95%;
+    }
+    .products-grid .product-item {
+        margin-bottom: 35px;
+    }
+    .products.wrapper~.toolbar .pages {
+        left: 45.5%;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .page-products.page-layout-1column .products-grid .product-item
+    {
+        width: 25%;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .page-products .products-grid .product-items {
+        width: 102.7%;
+    }
+    // .page-title {
+    //     padding: 17px 0 0 0;
+    // }
+    .category-cms, .category-image, .category-description {
+        margin-top: -13px;
+        word-spacing: 0.5px;
+        & p:nth-child(2) {
+            padding-top: 13px;
+        }
+    }
+    .pages strong.page {
+        padding-right: 28px;
+    }
+}
