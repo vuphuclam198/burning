@@ -308,7 +308,7 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
     .navigation ul {
-        padding: 5px 0;
+        padding: 5px 20px;
 
         li {
             width: 7%;
@@ -360,4 +360,15 @@
     .nav-sections {
         background: none;
     }
+}
+
+.nav-sections-item-content {
+    > .navigation {
+        display: block;
+        background: none;
+    }
+}
+
+.nav-sections-item-content {
+    background: none;
 }
