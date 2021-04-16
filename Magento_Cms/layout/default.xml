@@ -13,7 +13,5 @@
                 <block name="slick-block" class="Magento\Framework\View\Element\Template" template="Magento_Cms::slick.phtml" htmlClass="slick" htmlTag="div"/>
             </container>
         </referenceContainer>
-
-        
     </body>
 </page>
