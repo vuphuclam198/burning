@@ -55,11 +55,19 @@
                         <block class="Magento\Framework\View\Element\Template" name="exclusive" template="Magento_Theme::footer/footer_exclusive.phtml" />
                     </container>
                 </container>
+               <container name="footer.ship123" after="-" htmlClass="footer ship" htmlTag="div">
                     <container label="Page Footer" htmlTag="div" htmlClass="page-main">
                         <block class="Magento\Framework\View\Element\Template" name="ship.store" template="Magento_Theme::footer/footer_ship.phtml" />
                     </container>
                 </container>
             </container>
+
+            <referenceContainer name="footer">
+                <referenceBlock name="footer_links" remove="true" />
+                <block class="Magento\Framework\View\Element\Template" before="-" name="categories.links" template="Magento_Theme::footer/categories_link.phtml" />
+                <block class="Magento\Framework\View\Element\Template" after="categories.links" name="burning_log.link" template="Magento_Theme::footer/burning_log_link.phtml" />
+                <block class="Magento\Framework\View\Element\Template" after="burning_log.link" name="Our.Policies.link" template="Magento_Theme::footer/our_policies_link.phtml" />
+            </referenceContainer>
         </referenceContainer>
 
             <!-- <block class="Magento\Framework\View\Element\Template" name="footer-social" template="Magento_Theme::footer/footer_social.phtml" />
