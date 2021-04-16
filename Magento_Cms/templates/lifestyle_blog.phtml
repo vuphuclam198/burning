@@ -1,0 +1,16 @@
+<div class="section-lifestyle-blog">
+    <div class="section-heading">
+        <p>Lifestyle Blog</p>
+    </div>
+
+    <div class="blog__list">
+        <?= $block->getLayout()
+
+        ->createBlock('Magento\Cms\Block\Block')
+
+        ->setBlockId('lifestyle-blog-links')
+
+        ->toHtml();
+        ?>
+    </div>
+</div>
