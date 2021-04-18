@@ -222,3 +222,75 @@
     top: 100%;
     left: 0;
 }
+
+@media only screen and(max-width:1199px) {
+    .ship-list .item:nth-child(1), .ship-list .item:nth-child(2), .ship-list .item:nth-child(3), .ship-list .item:nth-child(4) {
+        margin-left: 0;
+        padding-left: 30px;
+    }
+
+    .ship-list .item:nth-child(1) .text, .ship-list .item:nth-child(2) .text, .ship-list .item:nth-child(3) .text, .ship-list .item:nth-child(4) .text {
+        padding-left: 0;
+    }
+}
+
+@media only screen and(max-width:991px) {
+    .ship-list {
+        grid-template-columns: 1fr 1fr;
+
+        .item {
+            margin-bottom: 25px;
+            padding-left: 40px;
+
+            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                margin-left: 0;
+
+                .text {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:767px) {
+    .ship-list .item:nth-child(1), .ship-list .item:nth-child(2), .ship-list .item:nth-child(3), .ship-list .item:nth-child(4) {
+        margin-left: 33px;
+        line-height: 15px;
+        margin-bottom: 23px;
+    }
+
+    .ship-list .item:nth-child(2), .ship-list .item:nth-child(4) {
+        margin-left: 51px;
+        padding-left: 33px;
+        padding-right: 31px;
+    }
+    .showroom-item {
+        &.weber, &.outdoor_elegance {
+            display: none;
+        }
+    }
+    
+    .showroom {
+        justify-content: center;
+    }
+
+    .showroom-item.canberra_showroom {
+        margin-left: 0;
+    }
+
+    .footer.content {
+        .our-policies, .burning-log {
+            padding-left: 0;
+        }
+        
+    }
+
+    
+}
+
+@media only screen and(max-width:380px) {
+    .footer.content {
+        grid-template-columns: 1fr;
+    }
+}

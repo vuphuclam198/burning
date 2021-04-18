@@ -165,6 +165,10 @@
 .section-catalogues {
     margin-top: 54px;
     
+    img {
+        width: 100%;
+    }
+
     .catalogues__list {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -236,12 +240,12 @@
     }
 
     .inspiration__list {
-        display: grid;
+        display: grid !important;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 20px;
     }
-
-    .content {
+    
+    .view_more {
         text-align: center;
         a {
             background: none;
@@ -257,6 +261,7 @@
             text-align: center;
         }
     }
+
     
     img {
         width: 100%;
@@ -381,4 +386,53 @@
             transform: translateY(-50%);
         }
     }   
+}
+
+@media only screen and(max-width:768px) {
+    .categories__list {
+        grid-template-columns: 1fr;
+    }
+
+    .section-collection .collection__list {
+        grid-template-columns: 1fr;
+    }
+
+    .section-catalogues .catalogues__list {
+        grid-template-columns: 1fr;
+    }
+
+    .section-testimonials .Testimonials-list {
+        grid-template-columns: 1fr;
+    }
+
+    .section-lifestyle-blog .blog__list {
+        grid-template-columns: 1fr;
+
+        .blog__item {
+            display: none;
+
+            &:nth-child(1), &:nth-child(2) {
+                display: block;
+            }
+        }
+    }
+
+    .section-testimonials .link__more .link {
+        display: block;
+    }
+
+    .section-inspiration .inspiration__list {
+        grid-template-columns: 1fr 1fr;
+
+        .inspiration__item {
+            &:nth-child(5n+0) {
+                display: none;
+            }
+        }
+    }
+
+    .section-inspiration .view_more a {
+        display: block;
+    }
+
 }
