@@ -1,3 +1,24 @@
-@import "_main_detail.less";
-@import "_navigation.less";
-@import "_related.less";
+@import "detail/_main_detail.less";
+@import "detail/_navigation.less";
+@import "detail/_related.less";
+@import "listing/_main_listing.less";
+@import "listing/_banner_listing.less";
+
+& when (@media-common = true) {
+.products-grid {
+    .product-item-info {
+        &:not(:hover):not(.active) {
+            .product-item-inner {
+                position: relative;
+                height: auto;
+                width: auto;
+                border: none;
+                box-shadow: none;
+            }
+        }
+        // &:hover {
+        //     display: none;
+        // }
+    }
+}
+}

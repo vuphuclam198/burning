@@ -46,40 +46,45 @@ switch ($type = $block->getType()) {
             $title = __('You may also like');
             $items = $block->getItems();
             // foreach($items as $_items){
-            //     // $objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
-            //     // $repository = $objectManager->create('Magento\Catalog\Model\ProductRepository');
-            //     var_dump($_items);
-            //     die();
-            //     // $product    = $repository->getById('2061');  
-            //     // $data = $product->getTypeInstance()->getConfigurableOptions($product);  
-            //     // $options = array();
-
-            //     // foreach ($data as $attr) {
-            //     //     foreach ($attr as $p) {
-            //     //         $options[] = $p['attribute_code'];
-            //     //     }
-                    
-            //     // }
-            //     // // var_dump($options);
-            //     // // die();
-            //     // $count=0;
-            //     // foreach($options as $os)
-            //     // {
-            //     //     if($os=="color")
-            //     //     {
-            //     //         $count+=1;
-            //     //     }
-            //     // }
-            //     // if($count>1)
-            //     // echo "co";
+            //     $objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
+            //     $repository = $objectManager->create('Magento\Catalog\Model\ProductRepository');
+            //     // var_dump($_items->getId());
             //     // die();
+            //     $product    = $repository->getById($_items->getId());  
+            //     if($product->getTypeId()=="configurable")
+            //     {
+            //         $data = $product->getTypeInstance()->getConfigurableOptions($product);  
+            //         $options = array();
+
+            //         foreach ($data as $attr) {
+            //             foreach ($attr as $p) {
+            //                 $options[] = $p['attribute_code'];
+            //             }
+                        
+            //         }
+            //         // var_dump($options);
+            //         // die();
+            //         $count=0;
+            //         foreach($options as $os)
+            //         {
+            //             if($os=="color")
+            //             {
+            //                 $count+=1;
+            //             }
+            //         }
+            //             echo "co";
+            //     }
+            //     else {
+            //         echo "0";
+            //     }
+                
             // }
             $limit = 0;
             $shuffle = 0;
             $canItemsAddToCart = $block->canItemsAddToCart();
 
             $showAddTo = true;
-            $showCart = false;
+            $showCart = true;
             $templateType = null;
             $description = false;
         }
@@ -207,7 +212,7 @@ $_item = null;
                         aria-level="2"><?= $block->escapeHtml($title) ?></strong>
             </div>
             <div class="block-content content" aria-labelledby="block-<?= $block->escapeHtmlAttr($class) ?>-heading">
-                <!--  -->
+                
                 <div class="products wrapper grid products-grid products-<?= $block->escapeHtmlAttr($type) ?>">
                     <ol class="products list items product-items slick-nav">
                         <?php foreach ($items as $_item):?>
@@ -228,9 +233,37 @@ $_item = null;
                                    class="product photo product-item-photo">
                                     <?= $block->getImage($_item, $image)->toHtml() ?>
                                 </a>
-                                <div class="related-color">
-                                        MORE COLOURS AVAILABLE
-                                </div>
+                                
+                                <?php $objectManager  = \Magento\Framework\App\ObjectManager::getInstance(); ?>
+                                    <?php $repository = $objectManager->create('Magento\Catalog\Model\ProductRepository'); ?>
+                                    <?php $product    = $repository->getById($_item->getId());  ?>
+                                    <?php if($product->getTypeId()=="configurable") {?>
+                                    <?php $data = $product->getTypeInstance()->getConfigurableOptions($product);   ?>
+                                    <?php $options = array(); ?>
+
+                                    <?php foreach ($data as $attr) { ?>
+                                        <?php foreach ($attr as $p) { ?>
+                                            <?php $options[] = $p['attribute_code']; ?>
+                                            <?php } ?>
+                                        
+                                            <?php } ?>
+                                    
+                                    <?php $count=0;  ?>
+                                    <?php foreach($options as $os) ?>
+                                    <?php { ?>
+                                        <?php if($os=="color") ?>
+                                        <?php { ?>
+                                            <?php $count+=1; ?>
+                                            <?php } ?>
+                                            <?php } ?>
+                                            <?php if($count>1) ?>
+                                                <?php { ?>
+                                                    <div class="related-color">
+                                                MORE COLOURS AVAILABLE
+                                                </div>
+                                                <?php }?>
+                                    <?php }?>
+                                
                                 <div class="product details product-item-details">
                                     <strong class="product name product-item-name"><a
                                             class="product-item-link"
@@ -240,6 +273,8 @@ $_item = null;
                                     </strong>
 
                                     <?= /* @noEscape */ $block->getProductPrice($_item) ?>
+                                    
+
 
                                     <?php if ($templateType):?>
                                         <?= $block->getReviewsSummaryHtml($_item, $templateType) ?>
@@ -313,9 +348,9 @@ $_item = null;
                                             <?php endif; ?>
 
                                             <?php if ($showAddTo):?>
-                                                <button type="submit" title="Add to Cart" class="action primary tocart" id="product-addtocart-button">
+                                                <!-- <button type="submit" title="Add to Cart" class="action primary tocart" id="product-addtocart-button">
                                                     <span>Add to Cart</span>
-                                                </button>
+                                                </button> -->
                                             <?php endif; ?>
                                         </div>
                                         <?php // phpcs:enable ?>
@@ -353,7 +388,35 @@ $_item = null;
                         nextArrow: false,
                         speed: 300,
                         slidesToShow: 4,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        responsive: [
+                                        {
+                                            breakpoint: 1025,
+                                            settings: {
+                                                slidesToShow: 2,
+                                            }
+                                        }, 
+                                        {
+                                            breakpoint: 768,
+                                            settings: {
+                                                slidesToShow: 2,
+                                            }
+                                        },
+                                        {
+                                            breakpoint: 640,
+                                            settings: {
+                                                slidesToShow: 2,
+                                            }
+                                        },
+
+                                        {
+                                            breakpoint: 480,
+                                            settings: {
+                                                slidesToShow: 1,
+                                                slidesToScroll: 1
+                                            }
+                                        }
+                                    ]
                     });
                     
                 });

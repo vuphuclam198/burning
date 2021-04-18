@@ -1,0 +1,83 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * Product media data template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View\Gallery
+ */
+?>
+
+<?php
+$images = $block->getGalleryImages()->getItems();
+$mainImage = current(array_filter($images, function ($img) use ($block) {
+    return $block->isMainImage($img);
+}));
+
+if (!empty($images) && empty($mainImage)) {
+    $mainImage = $block->getGalleryImages()->getFirstItem();
+}
+
+$helper = $block->getData('imageHelper');
+$mainImageData = $mainImage ?
+    $mainImage->getData('medium_image_url') :
+    $helper->getDefaultPlaceholderUrl('image');
+    foreach($images as $images)
+    {
+
+        $id=$images->getEntityId();
+    }
+    $objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
+    $repository = $objectManager->create('Magento\Catalog\Model\ProductRepository');
+    $product= $repository->getById($images->getEntityId());
+    $action="";
+    if($product->getTypeId()=="configurable"){
+        $action=$product->getAttributeText('more_action');
+    }
+    // $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    // $product = $objectManager->get('Magento\Catalog\Model\Product')->load($id);
+    
+    
+    //echo $pre_order;
+    // if($pre_order=="Yes")
+    // {
+    //     echo 'ok';
+    // }
+    // else {
+    //     echo "ko";
+    // }
+    // var_dump($pre_order);
+    // var_dump($id);
+?>
+<div class="more-option">
+    <?php if($action=="pre order") {?>
+        <button class='detail pre-order'>Pre Order</button>
+    <?php } elseif ($action=="sale") {?>
+        <button class='detail sale'>Sale</button>
+    <?php } ?>
+   
+    <div class="gallery-placeholder _block-content-loading" data-gallery-role="gallery-placeholder">
+        <img
+            alt="main product photo"
+            class="gallery-placeholder__image"
+            src="<?= /* @noEscape */ $mainImageData ?>"
+        />
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "[data-gallery-role=gallery-placeholder]": {
+            "mage/gallery/gallery": {
+                "mixins":["magnifier/magnify"],
+                "magnifierOpts": <?= /* @noEscape */ $block->getMagnifier() ?>,
+                "data": <?= /* @noEscape */ $block->getGalleryImagesJson() ?>,
+                "options": <?= /* @noEscape */ $block->getGalleryOptions()->getOptionsJson() ?>,
+                "fullscreen": <?= /* @noEscape */ $block->getGalleryOptions()->getFSOptionsJson() ?>,
+                 "breakpoints": <?= /* @noEscape */ $block->getBreakpoints() ?>
+            }
+        }
+    }
+</script>

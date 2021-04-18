@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main.content">
+            <block name="list-banner-burning" class="Magento\Framework\View\Element\Template" template="Magento_Catalog::list_banner_burning.phtml" before="-"/>
+            <!-- <container name="category-filter" htmlTag="div" htmlClass="category-filter" after="list-banner-burning"/> -->
+        </referenceContainer>
+        <!-- <referenceContainer name="main.content" remove="true"/> -->
+        <referenceBlock name="category.product.addto" remove="true"/>
+        <!-- <move element="catalog.leftnav" destination="category-filter" before="-"/> -->
+        <move element="category.view.container" destination="main.content" after="-"/>
+        <move element="page.main.title" destination="main.content" before="category.view.container"/>
+        
+         <!-- <move element="product_list_toolbar" destination="category-filter" after="catalog.leftnav"/> -->
+    </body>
+</page>
