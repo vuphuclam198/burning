@@ -5,18 +5,18 @@
     <p class="description">Find us at @burninglog, show us your furniture with #burninglog</p>
 
     <div class="inspiration__content">
-            <?= $block->getLayout()
+        <?= $block->getLayout()
 
-            ->createBlock('Magento\Cms\Block\Block')
+        ->createBlock('Magento\Cms\Block\Block')
 
-            ->setBlockId('inspiration-block')
+        ->setBlockId('inspiration-block')
 
-            ->toHtml();
-            ?>
-        </div>
-        
-        <!-- <a href="#">View our instagram</a> -->
-        
+        ->toHtml();
+        ?>
+    </div>
+    
+    <div class="view_more">
+        <a href="#">View our instagram</a>
     </div>
 </div>
 
@@ -32,7 +32,18 @@
                 infinite: true,
                 speed: 300,
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
             });
         });
     });
