@@ -1,9 +1,9 @@
-<div class="section-Best-sellers">
+<div class="section-new-arrivals">
     <div class="section-heading">
-        <p>Best sellers</p>
+        <p>New Arrials</p>
     </div>
 
-    <div class="products-sellers__list">
+    <div class="products-arrials__list">
         <?= $block->getLayout()
 
         ->createBlock('Magento\Cms\Block\Block')
@@ -22,7 +22,7 @@
         'slick'
     ], function ($) {
         $(document).ready(function () {
-            $(".widget-product-grid").slick({
+            $(".Arrials").slick({
                 dots: false,
                 infinite: true,
                 speed: 300,

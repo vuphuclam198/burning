@@ -126,7 +126,7 @@
 
     .minicart-wrapper .action.showcart .text {
         position: unset;
-        padding: 0 4px 0 5px;
+        padding: 0 0 0 7px;
     }
 }
 
@@ -232,12 +232,14 @@
         padding: 8px 15px;  
         .contact {
             float: right;
+            padding-right: 0;
         }
     }
 
     
     .panel.header .header-info {
         margin-right: 0;
+        margin-left: 0;
     }
 
     .block-search .action.search {
@@ -299,7 +301,9 @@
         }
     }
 
-
+    .block-search input {
+        position: unset;
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
@@ -356,10 +360,9 @@
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .nav-sections {
-        background: none;
-    }
+.nav-sections {
+    background: none;
+    margin-bottom: 10px;
 }
 
 .nav-sections-item-content {

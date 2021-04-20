@@ -1,6 +1,8 @@
-<div class="our-policies">
-    <p class="footer-title">Our Policies</p>
-    <ul>
+<div class="our-policies" data-role="collapsible">
+    <div data-role="trigger">
+        <p class="footer-title">Our Policies</p>
+    </div>
+    <ul data-role="content">
         <?= $block->getLayout()
 
         ->createBlock('Magento\Cms\Block\Block')

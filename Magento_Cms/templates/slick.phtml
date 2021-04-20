@@ -1,4 +1,4 @@
-<!-- <div class="slick">
+<div class="section-silder slick">
    <?php for($i=0;$i<3;$i++):?>
    <div class="slick-item">
       <div class="slick-image">
@@ -10,26 +10,30 @@
          ?>
       </div>
       <div class="slick-infor">
+         <div class="page-main">
+            <div class="slick-content">
             <?=
                $block->getLayout()
                ->createBlock('Magento\Cms\Block\Block')
                ->setBlockId('slick-title')
                ->toHtml();
             ?>
-         <div class="slick-desc">
-            <?=
-               $block->getLayout()
-               ->createBlock('Magento\Cms\Block\Block')
-               ->setBlockId('slick-desc')
-               ->toHtml();
-            ?>
-         </div>
+            <div class="slick-desc">
+               <?=
+                  $block->getLayout()
+                  ->createBlock('Magento\Cms\Block\Block')
+                  ->setBlockId('slick-desc')
+                  ->toHtml();
+               ?>
+            </div>
             <?=
                $block->getLayout()
                ->createBlock('Magento\Cms\Block\Block')
                ->setBlockId('slick-button')
                ->toHtml();
             ?>
+            </div>
+         </div>
       </div>
    </div>
    <?php endfor;?>
@@ -51,4 +55,4 @@
          slidesToScroll: 1
       });
    });
-</script> -->
+</script>

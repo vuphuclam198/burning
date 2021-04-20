@@ -7,12 +7,19 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+    <referenceContainer name="page.wrapper">
+        <container name="slick" after="page.top">
+            <block name="slick-block" class="Magento\Framework\View\Element\Template" template="Magento_Cms::slick.phtml" htmlClass="slick" htmlTag="div"/>
+        </container>
+    </referenceContainer>
+
         <referenceContainer name="main">
             <block class="Magento\Framework\View\Element\Template" name="categories.box" template="Magento_Cms::categories.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="event.achievement" after="categories.box" template="Magento_Cms::achievement.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="collection.block" after="event.achievement" template="Magento_Cms::collection.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="catalogues.block" after="collection.block" template="Magento_Cms::catalogues.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="best_sellers" after="catalogues.block" template="Magento_Cms::best_sellers.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="new_arrivals" after="best_sellers" template="Magento_Cms::new_arrivals.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="inspiration" after="best_sellers" template="Magento_Cms::inspiration.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="lifestyle.blog" after="inspiration" template="Magento_Cms::lifestyle_blog.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="testimonials.burning" after="lifestyle.blog" template="Magento_Cms::testimonials.phtml" />

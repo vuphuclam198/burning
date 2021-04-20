@@ -1,13 +1,16 @@
-<div class="burning-log">
-<p class="footer-title">Why Burning Log</p>
-<ul>
-    <?= $block->getLayout()
+<div class="burning-log" data-role="collapsible">
+    <div data-role="trigger">
+        <p class="footer-title">Why Burning Log</p>
+    </div>
+    
+    <ul data-role="content">
+        <?= $block->getLayout()
 
-    ->createBlock('Magento\Cms\Block\Block')
+        ->createBlock('Magento\Cms\Block\Block')
 
-    ->setBlockId('why-burning-log')
+        ->setBlockId('why-burning-log')
 
-    ->toHtml(); 
-    ?>
-</ul>
+        ->toHtml(); 
+        ?>
+    </ul>
 </div>

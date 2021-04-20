@@ -1,13 +1,27 @@
-<div class="categories_store">
-    <p class="footer-title">Categories</p>
-    <ul>
-    <?= $block->getLayout()
+<div class="categories_store" data-role="collapsible">
+    <div data-role="trigger">
+        <p class="footer-title">Categories</p>
+    </div>
+    <ul data-role="content">
+        <?= $block->getLayout()
 
-    ->createBlock('Magento\Cms\Block\Block')
+        ->createBlock('Magento\Cms\Block\Block')
 
-    ->setBlockId('footer-middle-links-1')
+        ->setBlockId('footer-middle-links-1')
 
-    ->toHtml(); 
-    ?>
+        ->toHtml(); 
+        ?>
     </ul>
 </div>
+
+<script>
+    $(window).resize(function() {
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        require([
+            'jquery',
+            'accordion'], function ($) {
+            $("footer").accordion();
+        });
+    }
+    });
+</script>
